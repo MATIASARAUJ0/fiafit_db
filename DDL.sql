@@ -434,9 +434,9 @@ CREATE TABLE t_events (
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE t_event_attendances {
+CREATE TABLE t_event_attendances (
     event_id INTEGER REFERENCES t_events(event_id) ON DELETE CASCADE,
     client_id INTEGER REFERENCES t_clients(client_id) ON DELETE CASCADE,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-}
+);
