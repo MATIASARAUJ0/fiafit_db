@@ -242,6 +242,7 @@ CREATE TABLE t_client_memberships (
     client_id INTEGER REFERENCES t_clients(client_id) ON DELETE CASCADE,
     membership_id INTEGER REFERENCES t_memberships(membership_id) ON DELETE SET NULL,
     membership_start_date DATE NOT NULL,
+    membership_end_date DATE NOT NULL,
     payment_frequency_months INTEGER NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP

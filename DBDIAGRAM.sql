@@ -223,6 +223,7 @@ Table t_client_memberships {
   client_id integer [ref: - t_clients.client_id]
   membership_id integer [ref: > t_memberships.membership_id]
   membership_start_date date
+  membership_end_date date
   payment_frequency_months integer
   created_at timestamptz
   updated_at timestamptz
